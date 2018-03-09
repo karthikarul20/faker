@@ -43,16 +43,16 @@ class Provider(AddressProvider):
 
     def flat_number_prefix(self):
         from random import randint
-        flatnum = str(randint(1, 18))
+        flatnum = randint(1, 18)
         if flatnum < 10:
-            flatnum = "0" + flatnum
-        return '#' + flatnum
+            flatnum = "0" + str(flatnum)
+        return '#' + str(flatnum)
 
     def flat_number_suffix(self):
         from random import randint
-        flatnum = str(randint(1, 18))
+        flatnum = randint(1, 18)
         if flatnum < 10:
-            flatnum = "0" + flatnum
+            flatnum = "0" + str(flatnum)
         return flatnum
 
     blocks = ('Blk 1##', 'Blk 2##', 'Blk 3##', 'Blk 4##', 'Blk 1#', 'Blk 2#', 'Blk 3#', 'Blk 4#')
